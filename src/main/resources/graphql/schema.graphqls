@@ -1,0 +1,65 @@
+scalar LocalDateTime
+
+type Query {
+    getAllBatteries: [Battery!]!
+    findBatteriesByTimestampBetween(date1: LocalDateTime!,date2: LocalDateTime!): [Battery!]!
+    getAllHumiditySensors: [HumiditySensor!]!
+    findHumiditySensorsByTimestampBetween(date1: LocalDateTime!,date2: LocalDateTime!): [HumiditySensor!]!
+    getAllIntensitySensors: [IntensitySensor!]!
+    findIntensitySensorsByTimestampBetween(date1: LocalDateTime!,date2: LocalDateTime!): [IntensitySensor!]!
+    getAllSolarPanels: [SolarPanel!]!
+    findSolarPanelsByTimestampBetween(date1: LocalDateTime!,date2: LocalDateTime!): [SolarPanel!]!
+    getAllTempSensors: [TempSensor!]!
+    findTempSensorsByTimestampBetween(date1: LocalDateTime!,date2: LocalDateTime!): [TempSensor!]!
+    getAllTurbineCitizens: [TurbineCitizens!]!
+    findTurbineCitizensByTimestampBetween(date1: LocalDateTime!,date2: LocalDateTime!): [TurbineCitizens!]!
+    getAllTurbineOutputs: [TurbineOutput!]!
+    findTurbineOutputsByTimestampBetween(date1: LocalDateTime!,date2: LocalDateTime!): [TurbineOutput!]!
+}
+
+type Battery {
+    id: ID!
+    voltage: Float!
+    currentOne: Float!
+    currentTwo: Float!
+    timestamp: LocalDateTime!
+}
+
+type HumiditySensor {
+    id: ID!
+    humidity: Float!
+    timestamp: LocalDateTime!
+}
+
+type IntensitySensor {
+    id: ID!
+    intensity: Float!
+    timestamp: LocalDateTime!
+}
+
+type SolarPanel {
+    id: ID!
+    voltage: Float!
+    current: Float!
+    timestamp: LocalDateTime!
+}
+
+type TempSensor {
+    id: ID!
+    temperature: Float!
+    timestamp: LocalDateTime!
+}
+
+type TurbineCitizens{
+    id: ID!
+    voltage: Float!
+    current: Float!
+    timestamp: LocalDateTime!
+}
+
+type TurbineOutput{
+    id: ID!
+    voltage: Float!
+    current: Float!
+    timestamp: LocalDateTime!
+}
