@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 public class Battery {
     @Id
     private long id;
+    private long machineId;
     private float voltage;
     private float currentOne;
     private float currentTwo;

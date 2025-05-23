@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 public class TurbineCitizens {
     @Id
     private long id;
+    private long machineId;
     private float voltage;
     private float current;
     private LocalDateTime timestamp;

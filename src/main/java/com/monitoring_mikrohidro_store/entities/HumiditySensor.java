@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 public class HumiditySensor {
     @Id
     private long id;
+    private long machineId;
     private float humidity;
     private LocalDateTime timestamp;
 }
